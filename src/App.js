@@ -3,9 +3,12 @@ import Footer from './Footer'
 import Note from './Note'
 
 export default function App(){
-    return <div>
+    return (
+      <div>
         <Header/>
         <Footer/>
         <Note/>
-    </div>
+      </div>
+    )
+
 }

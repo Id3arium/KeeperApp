@@ -1,3 +1,8 @@
 export default function Note(){
-    return <div> Note </div>
+    return (
+      <div className='Note'> 
+        <h1> Title </h1>
+        <p> Content </p>
+      </div>
+    )
   }

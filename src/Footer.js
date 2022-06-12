@@ -1,3 +1,10 @@
+
+
 export default function Footer(){
-  return (<footer>  </footer>)
+  let currentYear = new Date.now().getYear()
+  return (
+    <footer>
+      <p> Copyright © {currentYear} </p>
+    </footer>
+  )
 }
