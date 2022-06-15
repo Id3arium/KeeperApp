@@ -8,8 +8,10 @@ export default function App() {
   return (
     <div>
       <Header />
+      {notes.map((props) => (
+        <Note {...props} />
+      ))}
       <Footer />
-      <Note />
     </div>
   );
 }
