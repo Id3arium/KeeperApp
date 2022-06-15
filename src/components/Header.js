@@ -1,5 +1,10 @@
 import React from "react";
 
 export default function Header() {
-  return <h1> Keeper. Keep your notes wherever you go.</h1>;
+  return (
+    <header>
+      <h1>Keeper</h1>
+      <p>Keep your notes wherever you go</p>
+    </header>
+  );
 }
