@@ -60,6 +60,7 @@ footer p {
   float: right;
   color: #f5ba13;
   border: none;
+  border-radius: 15%;
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -92,7 +93,7 @@ form button {
   background: #f5ba13;
   color: #fff;
   border: none;
-  border-radius: 50%;
+  border-radius: 7px;
   width: 36px;
   height: 36px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
