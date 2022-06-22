@@ -12,6 +12,10 @@ function CreateArea(props) {
       };
     });
   }
+  function submitNote(e) {
+    e.preventDefault();
+    props.handleAddNote(note);
+  }
   return (
     <div>
       <form>
@@ -28,13 +32,7 @@ function CreateArea(props) {
           value={note.content}
           onChange={handleChange}
         />
-        <button
-          onClick={() => {
-            props.handleAddNote(note);
-          }}
-        >
-          Add
-        </button>
+        <button onClick={submitNote}>Add</button>
       </form>
     </div>
   );
