@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import _ from "lodash";
 function CreateArea(props) {
   const [note, setNote] = useState({ title: "", content: "" });
 
@@ -14,8 +14,11 @@ function CreateArea(props) {
   }
   function submitNote(e) {
     e.preventDefault();
-    props.onAdd(note);
-    setNote({ title: "", content: "" });
+    let emptyNote = { title: "", content: "" };
+    if (!_.isEqual(note, emptyNote)) {
+      props.onAdd(note);
+      setNote(emptyNote);
+    }
   }
   return (
     <div>
