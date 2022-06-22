@@ -5,7 +5,7 @@ import Note from "./Note";
 import defaultNotes from "../notes";
 import CreateArea from "./CreateArea";
 export default function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(defaultNotes);
   function addNote(note) {
     setNotes((prevNotes) => {
       note.id = prevNotes.length;
