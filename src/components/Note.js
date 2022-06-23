@@ -9,11 +9,7 @@ export default function Note(props) {
       <button onClick={deleteNote}>
         <DeleteIcon />
       </button>
-      <h1>
-        {" "}
-        {"(" + (props.id + 1) + ") "}
-        {props.title}{" "}
-      </h1>
+      <h1>{props.title} </h1>
       <p> {props.content} </p>
     </div>
   );
