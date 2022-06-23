@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Note from "./Note";
 import defaultNotes from "../notes";
 import CreateArea from "./CreateArea";
+
 export default function App() {
   const [notes, setNotes] = useState([]);
   function addNote(note) {
