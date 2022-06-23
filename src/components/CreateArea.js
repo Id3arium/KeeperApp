@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import AddIcon from "@material-ui/icons/Add";
+import Fab from "@material-ui/core/Fab";
+import Zoom from "@material-ui/core/Zoom";
 import _ from "lodash";
 function CreateArea(props) {
   const [note, setNote] = useState({ title: "", content: "" });
-
+  const [isExpanded, setIsExpanded] = useState();
   function handleChange(e) {
     const { name, value } = e.target;
     setNote((prevNote) => {
@@ -28,15 +31,24 @@ function CreateArea(props) {
           placeholder="Title"
           value={note.title}
           onChange={handleChange}
+          onFocus={() => {
+            setIsExpanded(true);
+          }}
         />
-        <textarea
-          name="content"
-          placeholder="Take a note..."
-          rows="4"
-          value={note.content}
-          onChange={handleChange}
-        />
-        <button onClick={submitNote}>Add</button>
+        {isExpanded && (
+          <textarea
+            name="content"
+            placeholder="Take a note..."
+            rows="4"
+            value={note.content}
+            onChange={handleChange}
+          />
+        )}
+        <Zoom in={true}>
+          <Fab onClick={submitNote}>
+            <AddIcon />
+          </Fab>
+        </Zoom>
       </form>
     </div>
   );
