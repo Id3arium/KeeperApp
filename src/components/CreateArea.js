@@ -23,6 +23,9 @@ function CreateArea(props) {
       setNote(emptyNote);
     }
   }
+  function expandArea() {
+    setIsExpanded(true);
+  }
   return (
     <div>
       <form className="create-note">
@@ -41,9 +44,7 @@ function CreateArea(props) {
           rows={isExpanded ? "4" : "1"}
           value={note.content}
           onChange={handleChange}
-          onFocus={() => {
-            setIsExpanded(true);
-          }}
+          onFocus={expandArea}
         />
         <Zoom in={isExpanded}>
           <Fab onClick={submitNote}>
