@@ -40,7 +40,7 @@ footer p {
   color: #ccc;
 }
 .note {
-  background: #fff;
+  background: #fcfcfc;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
@@ -76,13 +76,14 @@ form.create-note {
   position: relative;
   width: 480px;
   margin: 30px auto 20px auto;
-  background: #fff;
+  background: #fcfcfc;
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 form.create-note input,
 form.create-note textarea {
+  background-color: #fcfcfc;
   width: 100%;
   border: none;
   padding: 4px;
