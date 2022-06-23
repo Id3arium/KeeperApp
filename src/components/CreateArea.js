@@ -5,7 +5,7 @@ import Zoom from "@material-ui/core/Zoom";
 import _ from "lodash";
 function CreateArea(props) {
   const [note, setNote] = useState({ title: "", content: "" });
-  const [isExpanded, setIsExpanded] = useState();
+  const [isExpanded, setIsExpanded] = useState(false);
   function handleChange(e) {
     const { name, value } = e.target;
     setNote((prevNote) => {
@@ -26,25 +26,26 @@ function CreateArea(props) {
   return (
     <div>
       <form className="create-note">
-        <input
-          name="title"
-          placeholder="Title"
-          value={note.title}
+        {isExpanded && (
+          <input
+            name="title"
+            placeholder="Title"
+            value={note.title}
+            onChange={handleChange}
+          />
+        )}
+
+        <textarea
+          name="content"
+          placeholder="Take a note..."
+          rows={isExpanded ? "4" : "1"}
+          value={note.content}
           onChange={handleChange}
           onFocus={() => {
             setIsExpanded(true);
           }}
         />
-        {isExpanded && (
-          <textarea
-            name="content"
-            placeholder="Take a note..."
-            rows="4"
-            value={note.content}
-            onChange={handleChange}
-          />
-        )}
-        <Zoom in={true}>
+        <Zoom in={isExpanded}>
           <Fab onClick={submitNote}>
             <AddIcon />
           </Fab>
