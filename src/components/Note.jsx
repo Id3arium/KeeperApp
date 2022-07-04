@@ -1,5 +1,6 @@
 import React from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
+
 export default function Note(props) {
   const deleteNote = () => {
     props.onDelete(props.id);
