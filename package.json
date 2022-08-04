@@ -1,6 +1,7 @@
 {
-  "name": "keeper-app-part-1-starting",
+  "name": "keeper-ap",
   "version": "1.0.0",
+  "homepage" : "http://andres-al-campos.github.io/KepperApp",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
@@ -13,9 +14,12 @@
     "react-scripts": "3.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "typescript": "3.3.3"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

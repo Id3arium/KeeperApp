@@ -9,7 +9,7 @@ export default function App() {
   const [notes, setNotes] = useState([])
 
   useEffect(() => {
-    const notes = JSON.parse(localStorage.getItem('notes'));
+    const notes = JSON.parse(localStorage.getItem('notes'))
     setNotes(notes ? notes : []);
   }, []);
 
