@@ -11,8 +11,9 @@ body {
   background: #eee;
   padding: 0 16px;
   background-color: #f5ba1300;
-  background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-color: #f0c800;
+  background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 header {
