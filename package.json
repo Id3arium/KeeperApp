@@ -1,7 +1,7 @@
 {
   "name": "keeper-ap",
   "version": "1.0.0",
-  "homepage" : "http://andres-al-campos.github.io/KepperApp",
+  "homepage" : "http://andres-al-campos.github.io/KepperApp/",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
